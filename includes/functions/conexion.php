@@ -10,7 +10,7 @@ $db_usuario = $_ENV['DB_USER'];
 $db_contra = $_ENV['DB_PASS'];
 
 try {
-    $cn = new PDO("mysql:host=$db_host;dbname=$db_name", $db_usuario, $db_contra);
+    $cn = new PDO("mysql:host=$db_host;dbname=$db_name;charset=utf8mb4", $db_usuario, $db_contra);
     // echo "<script>console.log('Conexion Exitosa');</script>";
 } catch (PDOException $e) {
     echo "<script>console.log('Error en la conexion local: $e');</script>";
